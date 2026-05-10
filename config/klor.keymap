@@ -40,6 +40,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 36 37 38 39>;
             hold-trigger-on-release;
         };
+
+        ht: hold_tap_kp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -48,10 +57,10 @@
         default_layer {
             display-name = "default";
             bindings = <
-                  &kp Q         &kp W         &kp E        &kp R        &kp T                                          &kp Y      &kp U        &kp I        &kp O         &kp P
+                  &kp Q         &kp W         &kp E        &kp R        &kp T                                          &kp Y      &kp U        &kp I        &ht SQT O     &ht LS(SQT) P
 &none             &hml LSHFT A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G                                          &kp H      &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &hmr RSHFT SEMI  &none
 &kp ESCAPE        &kp Z         &kp X         &kp C        &kp V        &kp B        &none           &none             &kp N      &kp M        &kp COMMA    &kp DOT       &kp FSLH         &kp SQT
-                                              &none        &kp LGUI     &lt LOWER TAB &kp SPACE      &kp ENTER         &lt RAISE BSPC &kp MINUS &none
+                                              &none        &kp BSPC     &lt LOWER TAB &kp SPACE      &kp ENTER         &lt RAISE BSPC &kp MINUS &none
             >;
         };
 
