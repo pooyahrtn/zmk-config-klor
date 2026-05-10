@@ -9,11 +9,13 @@
 #define RAISE  2
 #define ADJUST 3
 
-// Klor matrix position map (44 positions; outer pinkies + middle/encoder + outer thumbs are unused on 36-key):
+// Klor matrix position map (44 positions; outer pinkies + middle/encoder are unused on 36-key):
 //                  0  1  2  3  4         5  6  7  8  9
 //             10  11 12 13 14 15        16 17 18 19 20 21
 //             22  23 24 25 26 27 28 29  30 31 32 33 34 35
 //                          36 37 38 39  40 41 42 43
+// 36-key thumbs: physical thumbs at 36/37/38 (left, outer to inner) and 41/42/43 (right, inner to outer);
+// 39 and 40 are the inner-most thumb positions which don't exist on the 36-key.
 
 / {
     behaviors {
@@ -60,7 +62,7 @@
                   &kp Q         &kp W         &kp E        &kp R        &kp T                                          &kp Y      &kp U        &kp I        &ht SQT O     &ht LS(SQT) P
 &none             &hml LSHFT A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G                                          &kp H      &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &hmr RSHFT SEMI  &none
 &kp ESCAPE        &kp Z         &kp X         &kp C        &kp V        &kp B        &none           &none             &kp N      &kp M        &kp COMMA    &kp DOT       &kp FSLH         &kp SQT
-                                              &none        &kp ESCAPE   &lt LOWER TAB &kp SPACE      &kp ENTER         &lt RAISE BSPC &kp MINUS &none
+                                              &kp ESCAPE   &lt LOWER TAB &kp SPACE   &none          &none             &kp ENTER  &lt RAISE BSPC &kp MINUS
             >;
         };
 
@@ -70,7 +72,7 @@
                   &trans        &trans        &kp UP       &trans       &kp LPAR                                       &kp RPAR   &kp N7       &kp N8       &kp N9        &kp N0
 &trans            &kp LSHFT     &kp LEFT      &kp DOWN     &kp RIGHT    &kp LBKT                                       &kp RBKT   &hmr RGUI N4 &hmr RALT N5 &hmr RCTRL N6 &hmr RSHFT MINUS &trans
 &trans            &trans        &kp LGUI      &kp MINUS    &trans       &kp PLUS     &kp LBRC        &kp RBRC          &kp N1     &kp N2       &kp N3       &kp STAR      &trans           &trans
-                                              &none        &trans       &trans       &trans         &trans             &mo ADJUST &trans       &none
+                                              &trans       &trans       &trans       &none          &none              &trans     &mo ADJUST   &trans
             >;
         };
 
@@ -80,7 +82,7 @@
                   &kp N1        &kp N2        &kp N3       &kp N4       &kp N5                                         &kp N6     &kp N7       &kp N8       &kp N9        &kp N0
 &trans            &kp EXCL      &kp AT        &kp HASH     &kp DOLLAR   &kp PERCENT                                    &kp CARET  &kp AMPS     &kp STAR     &kp LPAR      &kp RPAR         &trans
 &trans            &kp GRAVE     &trans        &trans       &trans       &trans       &trans          &kp UNDER         &kp EQUAL  &trans       &trans       &kp PIPE      &kp TILDE        &trans
-                                              &none        &trans       &mo ADJUST   &trans         &trans             &trans     &trans       &none
+                                              &trans       &mo ADJUST   &trans       &none          &none              &trans     &trans       &trans
             >;
         };
 
