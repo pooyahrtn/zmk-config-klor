@@ -61,7 +61,7 @@
             bindings = <
                   &kp Q         &kp W         &kp E        &kp R        &kp T                                          &kp Y      &kp U        &kp I        &ht SQT O     &ht LS(SQT) P
 &none             &hml LSHFT A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G                                          &kp H      &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &hmr RSHFT SEMI  &none
-&kp ESCAPE        &kp Z         &kp X         &kp C        &kp V        &kp B        &none           &none             &kp N      &kp M        &kp COMMA    &kp DOT       &kp FSLH         &kp SQT
+&none             &kp Z         &kp X         &kp C        &kp V        &kp B        &none           &none             &kp N      &kp M        &kp COMMA    &kp DOT       &kp FSLH         &none
                                               &kp ESCAPE   &lt LOWER TAB &kp SPACE   &none          &none             &kp ENTER  &lt RAISE BSPC &kp MINUS
             >;
         };
@@ -69,9 +69,9 @@
         lower_layer {
             display-name = "lower";
             bindings = <
-                  &trans        &trans        &kp UP       &trans       &kp LPAR                                       &kp RPAR   &kp N7       &kp N8       &kp N9        &kp N0
+                  &kp PG_UP     &kp PG_DN     &kp UP       &trans       &kp LPAR                                       &kp RPAR   &kp N7       &kp N8       &kp N9        &kp N0
 &trans            &kp LSHFT     &kp LEFT      &kp DOWN     &kp RIGHT    &kp LBKT                                       &kp RBKT   &hmr RGUI N4 &hmr RALT N5 &hmr RCTRL N6 &hmr RSHFT MINUS &trans
-&trans            &trans        &kp LGUI      &kp MINUS    &trans       &kp PLUS     &kp LBRC        &kp RBRC          &kp N1     &kp N2       &kp N3       &kp STAR      &trans           &trans
+&none             &trans        &kp LGUI      &kp MINUS    &trans       &kp LBRC     &none           &none             &kp RBRC   &kp N1       &kp N2       &kp N3        &kp STAR         &none
                                               &trans       &trans       &trans       &none          &none              &trans     &mo ADJUST   &trans
             >;
         };
@@ -81,7 +81,7 @@
             bindings = <
                   &kp N1        &kp N2        &kp N3       &kp N4       &kp N5                                         &kp N6     &kp N7       &kp N8       &kp N9        &kp N0
 &trans            &kp EXCL      &kp AT        &kp HASH     &kp DOLLAR   &kp PERCENT                                    &kp CARET  &kp AMPS     &kp STAR     &kp LPAR      &kp RPAR         &trans
-&trans            &kp GRAVE     &trans        &trans       &trans       &trans       &trans          &kp UNDER         &kp EQUAL  &trans       &trans       &kp PIPE      &kp TILDE        &trans
+&none             &kp GRAVE     &kp EQUAL     &kp PLUS     &kp MINUS    &trans       &none           &none             &kp UNDER  &trans       &trans       &kp PIPE      &kp TILDE        &none
                                               &trans       &mo ADJUST   &trans       &none          &none              &trans     &trans       &trans
             >;
         };
